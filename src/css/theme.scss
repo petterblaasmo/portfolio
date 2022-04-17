@@ -1,7 +1,7 @@
-$text--light: 0, 0, 0;
-$text--dark: 255, 255, 255;
-$bg--light: 255, 255, 255;
-$bg--dark: 0, 0, 0;
+$text--light: #000;
+$text--dark: #fff;
+$bg--light: #fff;
+$bg--dark: #000;
 
 $themes: (
   light: (
@@ -31,6 +31,11 @@ $themes: (
       $theme-map: null !global;
     }
   }
+}
+
+@mixin background-opacity($color, $opacity: 0.25) {
+  background: $color;
+  background: rgba($color, $opacity);
 }
 
 @function t($key) {

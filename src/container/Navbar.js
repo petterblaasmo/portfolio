@@ -3,13 +3,10 @@ const Navbar = (props) => {
 
   return (
     <nav>
-      <div className="left">
-        <h1>Petter</h1>
-      </div>
+      <h1>Petter</h1>
       <ul className="middle">
         {["home", "about", "work", "skills", "contact"].map((item) => (
           <li key={`link-${item}`}>
-            <div />
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}

@@ -1,16 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .theme--light * {
-  color: black;
-  background: white;
+  color: #000;
+  background: #fff;
 }
 
 .theme--dark * {
-  color: white;
-  background: black;
+  color: #fff;
+  background: #000;
 }
 
 /* Navbar */
@@ -27,9 +29,21 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
-nav .left,
+.theme--light nav {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.theme--dark nav {
+  background: #000;
+  background: rgba(0, 0, 0, 0.25);
+}
+
 nav .middle,
 nav .right {
   display: -webkit-box;
@@ -43,8 +57,75 @@ nav .right {
           align-items: center;
 }
 
+nav .middle {
+  list-style: none;
+}
+
+nav .middle li {
+  margin: 0 5px;
+}
+
+nav .middle li a {
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
 /* Header */
 .header {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header div h1 {
+  font-size: 40px;
+}
+
+.header div h3 {
+  opacity: 0.7;
+}
+
+.header div h3,
+.header div div {
+  line-height: 0;
+}
+
+.header div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -8px;
+}
+
+.header div div p {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 5px 8px;
+  border-radius: 8px;
+  line-height: 20px;
+}
+
+.theme--light .header div div p {
+  background: #000;
+  color: #fff;
+}
+
+.theme--dark .header div div p {
+  background: #fff;
+  color: #000;
 }
 /*# sourceMappingURL=styles.css.map */
