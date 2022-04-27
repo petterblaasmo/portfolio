@@ -5,7 +5,7 @@ const Header = () => {
         <h3>Hi, I am</h3>
         <h1>Petter Blåsmo</h1>
         <div>
-          {["Student", "Intern", "Developer"].map((item) => (
+          {["Student", "Freelancer", "Developer"].map((item) => (
             <p>{item}</p>
           ))}
         </div>

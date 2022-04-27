@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Icon } from "../lib/functions";
 
 import ThemeContext from "./ThemeContext";
 
@@ -6,14 +7,13 @@ export default function SetTheme() {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
-    <select value={theme} onChange={(e) => setTheme(e.currentTarget.value)}>
-      {themeOptions.map((option, idx) => (
-        <option value={option.value} key={idx}>
-          {option.value}
-        </option>
-      ))}
-    </select>
+    <>
+      <button
+        className="changeColorMode"
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      >
+        {theme === "dark" ? <Icon icon="sun" /> : <Icon icon="moon" />}
+      </button>
+    </>
   );
 }
-
-const themeOptions = [{ value: "light" }, { value: "dark" }];

@@ -16,8 +16,16 @@ $nav-height: 50px;
   font-family: "Poppins", sans-serif;
 }
 
+.changeColorMode {
+  outline: 0;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 /* Navbar */
 nav {
+  $item-margin: 250px;
   position: fixed;
   width: 100%;
   height: $nav-height;
@@ -31,6 +39,10 @@ nav {
   }
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+
+  h1 {
+    margin-left: $item-margin;
+  }
 
   .middle,
   .right {
@@ -51,6 +63,10 @@ nav {
         text-decoration: none;
       }
     }
+  }
+
+  .right {
+    margin-right: $item-margin;
   }
 }
 
@@ -78,11 +94,12 @@ nav {
       justify-content: space-between;
       margin-top: -8px;
       p {
-        font-size: 12px;
+        font-size: 10px;
+        letter-spacing: 2px;
         text-transform: uppercase;
         font-weight: 600;
-        padding: 5px 8px;
-        border-radius: 8px;
+        padding: 2px 5px;
+        border-radius: 5px;
         line-height: 20px;
         @include themed() {
           background: t("text");

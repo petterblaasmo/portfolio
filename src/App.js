@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Navbar, Header } from "./container";
+import { Navbar, Header, Pagination } from "./container";
 import { ThemeProvider, ThemeSetter } from "./components/theme";
 
 class App extends Component {
@@ -12,6 +12,7 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider>
+        <Pagination />
         <Navbar element={<ThemeSetter />} />
         <Header />
       </ThemeProvider>
