@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-
-import { Navbar, Header, Pagination } from "./container";
-import { ThemeProvider, ThemeSetter } from "./components/theme";
+import { Home } from "./pages";
+import { Navbar, Socials, Pagination } from "./components";
 
 class App extends Component {
   constructor(props) {
@@ -11,11 +10,12 @@ class App extends Component {
 
   render() {
     return (
-      <ThemeProvider>
+      <>
+        <Navbar />
+        <Home />
         <Pagination />
-        <Navbar element={<ThemeSetter />} />
-        <Header />
-      </ThemeProvider>
+        <Socials />
+      </>
     );
   }
 }

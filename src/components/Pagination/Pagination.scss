@@ -1,0 +1,22 @@
+.pagination {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  li {
+    $size: 10px;
+    width: $size;
+    height: $size;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
