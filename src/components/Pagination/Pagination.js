@@ -1,8 +1,18 @@
 import "./Pagination.scss";
+import { Items } from "../../config";
 
-const Pagination = () => {
+const Pagination = ({ active }) => {
   const RenderDots = () => {
-    return <li></li>;
+    return Items.map((currentItem, index) => {
+      const item = currentItem.toLowerCase();
+      return (
+        <li
+          onClick={() => (window.location.href = `#${item}`)}
+          key={item + index}
+          className={active === item ? "active" : ""}
+        ></li>
+      );
+    });
   };
 
   return (

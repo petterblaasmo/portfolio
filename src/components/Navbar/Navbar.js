@@ -1,8 +1,13 @@
 import "./Navbar.scss";
+import { useState } from "react";
+import { Items } from "../../config";
+import logo from "../../lib/images/logo/logo-white.svg";
 
 const Navbar = () => {
+  const [hamburger, setHamburger] = useState(false);
+
   const ListItems = () => {
-    return ["Home", "About", "Work", "Skills", "Contact"].map((item, i) => {
+    return Items.map((item, i) => {
       return (
         <li>
           <a href={`#${item.toLowerCase()}`}>{item}</a>
@@ -13,14 +18,27 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="first">
-        <h1>Petter</h1>
+      <div className="first" onClick={() => (window.location.href = "/")}>
+        <img src={logo} alt="logo" />
       </div>
-      <ul>
-        <ListItems />
-      </ul>
-      <div className="last">
-        <p>Placeholder</p>
+
+      <div className="hamburger" onClick={() => setHamburger(!hamburger)}>
+        <div
+          className="top"
+          style={{
+            width: hamburger ? "20px" : null,
+            transform: hamburger ? "rotate(45deg)" : null,
+            marginBottom: hamburger ? "0" : null,
+          }}
+        ></div>
+        <div
+          className="bot"
+          style={{
+            width: hamburger ? "20px" : null,
+            transform: hamburger ? "rotate(-45deg)" : null,
+            marginTop: hamburger ? "-2px" : null,
+          }}
+        ></div>
       </div>
     </nav>
   );

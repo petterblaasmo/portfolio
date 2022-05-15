@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import "./global.scss";
 
 $nav-height: 50px;
 
@@ -13,14 +14,18 @@ $nav-height: 50px;
 
 body {
   background: rgb(218, 218, 218);
-  background: linear-gradient(
-    3deg,
-    rgba(218, 218, 218, 1) 5%,
-    rgba(244, 244, 244, 1) 100%
-  );
+  background: linear-gradient(1deg, $bg-main 15%, $bg-secondary 100%);
 }
 
 section {
+  position: relative;
   height: 100vh;
   width: 100%;
+}
+
+a {
+  color: #000;
+  font-weight: 600;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
 }

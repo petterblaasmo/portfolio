@@ -1,5 +1,7 @@
+@import "../../global.scss";
+
 .pagination {
-  position: fixed;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 20px;
@@ -7,16 +9,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  .active {
+    background: $bg-dark-accent !important;
+  }
   li {
+    &:not(:last-of-type) {
+      margin-bottom: 7.5px;
+    }
     $size: 10px;
     width: $size;
     height: $size;
-    background: rgba(0, 0, 0, 0.4);
+    background: $bg-lightest-accent;
     border-radius: 100%;
     cursor: pointer;
     transition: all 0.2s;
     &:hover {
-      background: rgba(0, 0, 0, 0.6);
+      background: $bg-light-accent;
     }
   }
 }

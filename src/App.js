@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Home } from "./pages";
-import { Navbar, Socials, Pagination } from "./components";
+import { Home, About } from "./pages";
+import { Navbar, Socials } from "./components";
 
 class App extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class App extends Component {
       <>
         <Navbar />
         <Home />
-        <Pagination />
+        <About />
         <Socials />
       </>
     );

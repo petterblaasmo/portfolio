@@ -1,0 +1,30 @@
+@import "../../../global.scss";
+
+$border: 1px solid rgba(0, 0, 0, 0.15);
+
+.tooltip {
+  position: relative;
+  .outside {
+    transition: all 0.2s;
+    &:hover {
+      ~ p {
+        opacity: 1;
+      }
+    }
+  }
+
+  p {
+    transition: all 0.2s;
+    opacity: 0;
+    position: absolute;
+    margin-top: 7.5px;
+    font-size: 10px;
+    background: $bg-light-accent;
+    box-shadow: $box-shadow;
+    border: $border;
+    color: $text-main;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: default;
+  }
+}

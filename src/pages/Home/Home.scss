@@ -1,12 +1,39 @@
-section {
+@import "../../global.scss";
+
+#home {
   display: flex;
   justify-content: center;
   align-items: center;
-  img {
-    height: 300px;
-    aspect-ratio: 1/1;
-    border-radius: 100%;
-    border: 5px solid #fff;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
+  .container {
+    &:hover {
+      cursor: default;
+    }
+    position: relative;
+    div {
+      position: absolute;
+      padding: 10px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: $box-shadow;
+    }
+    .hello-card {
+      top: -50px;
+      left: -150px;
+      line-height: 18px;
+      p {
+        font-size: 12px;
+        opacity: 0.8;
+      }
+      h1 {
+        font-size: 22px;
+      }
+    }
+    img {
+      height: 300px;
+      aspect-ratio: 1/1;
+      border-radius: 100%;
+      border: 5px solid #fff;
+      box-shadow: $box-shadow;
+    }
   }
 }
