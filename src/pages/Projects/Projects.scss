@@ -8,11 +8,14 @@
   background: $bg-secondary;
   color: $text-main;
   .container {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     .sort {
       display: inline-block;
       list-style: none;
+      margin-bottom: 50px;
       ul {
         border-radius: 5px;
         padding: 5px;
@@ -37,11 +40,19 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
       .project {
+        &:not(:last-of-type) {
+          margin-right: 30px;
+        }
+        align-self: stretch;
         padding: 15px;
         border-radius: 8px;
-        width: 30%;
+        width: 250px;
         background: $bg-dark-accent;
+        p {
+          opacity: 0.3;
+        }
         .project-image {
           position: relative;
           img {
@@ -53,8 +64,25 @@
           p {
             color: $bg-lightest-accent;
             font-weight: 800;
+            opacity: 1;
           }
         }
+      }
+    }
+
+    .projects-btn {
+      padding: 8px 12px;
+      outline: 0;
+      border: 0;
+      border-radius: 5px;
+      background: $bg-dark-accent;
+      margin-top: 50px;
+      color: $text-main;
+      transition: 0.2s all;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.02);
+        background: $bg-semi-dark-accent;
       }
     }
   }
