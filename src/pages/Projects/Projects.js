@@ -48,7 +48,11 @@ class Projects extends Component {
         </div>
         <div className="projects">
           {this.state.projects.map((project) => {
-            return <ReactMarkdown children={this.state.projects[0]} />;
+            return (
+              <div className="project">
+                <ReactMarkdown children={project} />
+              </div>
+            );
             /*return (
               <div className="project">
                 <div className="project-image">
