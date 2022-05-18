@@ -26,7 +26,7 @@ export const SocialIcons = [
   },
 ];
 
-export const Items = ["Home", "About", "Work", "Skills", "Contact"];
+export const Items = ["Home", "About", "Projects", "Skills", "Contact"];
 export const AboutInfo = [
   {
     title: "Discord Developer",

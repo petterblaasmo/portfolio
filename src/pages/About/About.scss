@@ -4,7 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: $bg-main;
+  color: $text-main;
   .header {
     text-align: center;
     font-size: 30px;
@@ -12,6 +13,7 @@
     margin-bottom: 50px;
     h1 {
       b {
+        color: $text-main;
         text-decoration: underline;
       }
     }

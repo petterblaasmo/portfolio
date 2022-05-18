@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Home, About } from "./pages";
+import { Home, About, Projects } from "./pages";
 import { Navbar, Socials } from "./components";
 
 class App extends Component {
@@ -14,6 +14,7 @@ class App extends Component {
         <Navbar />
         <Home />
         <About />
+        <Projects />
         <Socials />
       </>
     );

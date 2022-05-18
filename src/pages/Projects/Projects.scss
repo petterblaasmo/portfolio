@@ -1,0 +1,61 @@
+@import "../../global.scss";
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $bg-secondary;
+  color: $text-main;
+  .container {
+    position: relative;
+    align-items: center;
+    .sort {
+      display: inline-block;
+      list-style: none;
+      ul {
+        border-radius: 5px;
+        padding: 5px;
+        display: flex;
+        list-style: none;
+        background: $bg-dark-accent;
+        .active {
+          background: $bg-semi-dark-accent !important;
+        }
+        li {
+          cursor: pointer;
+          transition: all 0.2s;
+          padding: 5px 10px;
+          border-radius: 3px;
+          &:hover {
+            background: $bg-light-accent;
+          }
+        }
+      }
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .project {
+        padding: 15px;
+        border-radius: 8px;
+        width: 30%;
+        background: $bg-dark-accent;
+        .project-image {
+          position: relative;
+          img {
+            border-radius: 5px;
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+          }
+          p {
+            color: $bg-lightest-accent;
+            font-weight: 800;
+          }
+        }
+      }
+    }
+  }
+}
