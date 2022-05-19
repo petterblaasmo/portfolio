@@ -17,7 +17,15 @@ const Tooltip = (props) => {
         <div className="outside">{code}</div>
         <p
           className="social"
-          style={{ left: align === "left" ? "-50px" : "50px" }}
+          style={{
+            left:
+              align === "left" ? "-50px" : align === "right" ? "50px" : "50%",
+            transform:
+              !align || align === "top" || align === "bottom"
+                ? "translateX(-50%)"
+                : null,
+            top: align === "top" ? "-40px" : null,
+          }}
         >
           {text}
         </p>

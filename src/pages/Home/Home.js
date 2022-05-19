@@ -1,6 +1,7 @@
 import "./Home.scss";
+import React from "react";
 import selfie from "../../lib/images/selfie.jpg";
-
+import { Information } from "../../components";
 import { Wrapper, Motion } from "../../lib/wrapper";
 
 const Home = () => {
@@ -38,6 +39,7 @@ const Home = () => {
         <Cards />
         <img src={selfie} alt="selfie" />
       </div>
+      <Information />
     </>
   );
 };
