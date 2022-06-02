@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        <p className="suddle">Hi, I'm</p>
+        <p className="suddle monospace">Hi, I'm</p>
         <h1 className="name">Petter Blåsmo</h1>
         <h1 className="header">I turn ideas into reality</h1>
         <p className="info-text">
@@ -15,11 +15,14 @@ const Home = () => {
           satisfied with my work; I currently do freelance work while studying
           at university.
         </p>
-        <button>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            Read my resume
-          </a>
-        </button>
+        <a
+          className="exclude"
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="monospace">Read my resume</button>
+        </a>
       </div>
       <Information />
     </>

@@ -11,8 +11,8 @@ const Experience = () => {
   return (
     <div className="work-container">
       <h1 className="section-header">
-        <b>01.</b>
-        About me
+        <b>02.</b>
+        Experience
         <hr />
       </h1>
       <div className="work-flex">

@@ -9,14 +9,17 @@
     color: $text-header;
     .suddle {
       color: $bg-purple;
-      font-size: 13px;
+      font-size: 15px;
       margin-bottom: $margin;
+    }
+    .name {
+      opacity: 0.8;
     }
     .name,
     .header {
       $size: 70px;
       font-size: $size;
-      line-height: calc($size - 20px);
+      line-height: calc($size - 10px);
     }
     .header {
       color: $bg-light-accent;
@@ -24,10 +27,22 @@
     }
     .info-text {
       color: $text-main;
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 500;
-      width: 400px;
+      width: 500px;
       margin: $margin 0;
     }
+    a {
+      color: $bg-purple;
+    }
   }
+}
+
+.item {
+  width: 56%;
+  overflow: visible;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
 }

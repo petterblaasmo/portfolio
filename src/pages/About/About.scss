@@ -5,16 +5,18 @@
   justify-content: center;
   align-items: center;
   .about-me {
-    width: 450px;
+    width: 500px;
   }
   img {
-    height: 250px;
-    width: 250px;
+    height: 400px;
+    width: 400px;
     border-radius: 10px;
+    margin-top: 117px;
     margin-left: 50px;
   }
   p {
     color: $text-main;
+    font-size: 20px;
     margin-bottom: 10px;
   }
   .lists {

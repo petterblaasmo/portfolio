@@ -14,7 +14,7 @@ const Navbar = () => {
     return Items.map((item, i) => {
       return (
         <li>
-          <a href={`#${item.toLowerCase()}`}>
+          <a className="exclude monospace" href={`#${item.toLowerCase()}`}>
             <b>0{i + 1}.</b> {item}
           </a>
         </li>
@@ -29,6 +29,9 @@ const Navbar = () => {
       </div>
       <ul className="second">
         <ListItems />
+        <a className="exclude" href="/resume.pdf">
+          <button className="monospace small">Resume</button>
+        </a>
       </ul>
     </nav>
   );

@@ -27,50 +27,7 @@ class Projects extends Component {
   }
 
   render() {
-    const handleClick = (num) => this.setState({ active: num });
-    return (
-      <div className="container">
-        <div className="sort">
-          <ul>
-            <li
-              onClick={() => handleClick(0)}
-              className={this.state.active === 0 ? "active" : ""}
-            >
-              Website
-            </li>
-            <li
-              onClick={() => handleClick(1)}
-              className={this.state.active === 1 ? "active" : ""}
-            >
-              Discord
-            </li>
-          </ul>
-        </div>
-        <div className="projects">
-          {this.state.projects.map((project) => {
-            return (
-              <div className="project">
-                <ReactMarkdown children={project} />
-              </div>
-            );
-            /*return (
-              <div className="project">
-                <div className="project-image">
-                  <img src={backend} alt="" />
-                  <p>Category</p>
-                </div>
-                <h1>Project</h1>
-                <p>
-                  This is a short project description just to show how it will
-                  look
-                </p>
-              </div>
-            );*/
-          })}
-        </div>
-        <button className="projects-btn">See x more</button>
-      </div>
-    );
+    return;
   }
 }
 

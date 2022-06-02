@@ -13,7 +13,12 @@ const Socials = () => {
                 text={`${icon.name[0].toUpperCase()}${icon.name.slice(1)}`}
                 align="right"
                 code={
-                  <a href={icon.href} target="_blank" rel="noreferrer">
+                  <a
+                    className="exclude"
+                    href={icon.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <i className={`fab fa-${icon.icon}`}></i>
                   </a>
                 }

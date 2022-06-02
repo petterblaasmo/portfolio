@@ -34,7 +34,7 @@ class Information extends Component {
         <a
           style={{ display: !playing.title ? "none" : null }}
           href={playing?.songUrl}
-          className="spotify"
+          className="spotify exclude"
         >
           <img src={playing?.albumImageUrl} alt="playing" />
           <div className="song">
@@ -53,7 +53,7 @@ class Information extends Component {
         <a
           style={{ display: !discord ? "none" : null }}
           href="https://discord.com/users/216260135771701248"
-          className="discord"
+          className="discord exclude"
         >
           <div className="image">
             <img src={discord.member?.displayAvatarURL} alt="discord" />
