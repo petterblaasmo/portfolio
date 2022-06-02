@@ -4,7 +4,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 20px;
+  right: $distance;
   list-style: none;
   display: flex;
   flex-direction: column;

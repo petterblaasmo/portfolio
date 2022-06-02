@@ -28,7 +28,7 @@ export const SocialIcons = [
   },
 ];
 
-export const Items = ["Home", "About", "Projects", "Skills", "Contact"];
+export const Items = ["About", "Projects", "Work", "Skills", "Contact"];
 export const AboutInfo = [
   {
     title: "Discord Developer",
@@ -73,5 +73,29 @@ export const AboutInfo = [
       </p>
     ),
     img: freelance,
+  },
+];
+export const Work = [
+  {
+    name: "Blåsmo AS",
+    link: "https://blaasmo.dev",
+    category: "Freelance Developer",
+    from: "Nov 2021",
+    to: "Present",
+    points: [
+      "Develop various web applications for various of my clients",
+      "Find new clients to grow connections for a passive income while studying",
+    ],
+  },
+  {
+    name: "Biztek AS",
+    link: "https://biztek.no",
+    category: "Consultant",
+    from: "August 2021",
+    to: "July 2022",
+    points: [
+      "Surround myself with professionals to get a taste of life as a professional",
+      "Develop various websites for Biztek and their existing clients",
+    ],
   },
 ];

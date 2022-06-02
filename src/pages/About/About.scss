@@ -4,47 +4,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $bg-main;
-  color: $text-main;
-  .header {
-    text-align: center;
-    font-size: 30px;
-    margin-top: -50px;
-    margin-bottom: 50px;
-    h1 {
-      b {
-        color: $text-main;
-        text-decoration: underline;
-      }
-    }
+  .about-me {
+    width: 450px;
   }
-  .items {
+  img {
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    margin-left: 50px;
+  }
+  p {
+    color: $text-main;
+    margin-bottom: 10px;
+  }
+  .lists {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-    .item {
-      align-self: stretch;
-      &:not(:last-of-type) {
-        margin-right: 50px;
-      }
-      width: 200px;
-      height: auto;
-      img {
-        box-shadow: $box-shadow;
-        border-radius: 15px;
-        width: 100%;
-        aspect-ratio: 1/0.8;
-        object-fit: cover;
-      }
-      h1 {
-        font-size: 16px;
-        margin: 5px 0;
-      }
-      p {
-        opacity: 0.8;
-        font-size: 12px;
-      }
-    }
   }
 }

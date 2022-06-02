@@ -1,62 +1,58 @@
 @import "../../global.scss";
 
-nav {
+.box-shadow {
   box-shadow: $box-shadow;
+  transition: all 0.2s;
+}
+nav {
   z-index: 1000;
   position: fixed;
   background: $bg-secondary;
-  height: 60px;
+  height: $nav-height;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   $margin: 50px;
-  .first,
-  .hamburger {
-    margin: $margin;
-  }
   .first {
+    margin: 0 $margin;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     img {
       box-shadow: $box-shadow;
-      height: 45px;
+      height: 30px;
       aspect-ratio: 1/1;
     }
   }
-  .hamburger {
-    position: relative;
-    cursor: pointer;
-    height: 30px;
-    width: 30px;
-    padding: 7.5px;
-    border-radius: 100%;
-    background: $bg-dark-accent;
+  .second {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    &:hover {
-      .top {
-        width: 14px;
+    align-items: center;
+    margin-right: $margin;
+    li {
+      font-size: 12px;
+      * {
+        font-weight: 300;
       }
-      .bot {
-        width: 22px;
+      a {
+        transition: 0.2s all;
+        text-decoration: none;
+        color: $text-main;
       }
-    }
-    .top {
-      margin-bottom: 5px;
-    }
-    .top,
-    .bot {
-      transition: all 0.4s;
-      width: 20px;
-      height: 2px;
-      margin-right: 5px;
-      border-radius: 1000px;
-      background: #fff;
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+      b {
+        font-size: 11px;
+        color: $bg-purple;
+      }
+      &:hover {
+        a {
+          color: $bg-purple;
+        }
+      }
     }
   }
 }

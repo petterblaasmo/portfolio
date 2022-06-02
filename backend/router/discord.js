@@ -17,15 +17,15 @@ router.get("/", async (req, res) => {
   return res.status(200).json({
     member: member.user,
     presence: {
-      status: Presence.status,
+      status: Presence?.status,
       activity:
-        Presence.activities.length > 0
-          ? Presence.activities[0].id === "custom"
-            ? Presence.activities[1].name === "Spotify" &&
-              Presence.activities[2]
-              ? Presence.activities[2]
-              : Presence.activities[1]
-            : Presence.activities[0]
+        Presence?.activities.length > 0
+          ? Presence?.activities[0].id === "custom"
+            ? Presence?.activities[1].name === "Spotify" &&
+              Presence?.activities[2]
+              ? Presence?.activities[2]
+              : Presence?.activities[1]
+            : Presence?.activities[0]
           : ["Nothing"],
     },
   });

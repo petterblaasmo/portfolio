@@ -19,11 +19,12 @@ $border: 1px solid rgba(0, 0, 0, 0.15);
     position: absolute;
     margin-top: 7.5px;
     font-size: 10px;
+    /*
     background: $bg-light-accent;
     box-shadow: $box-shadow;
+    */
     border: $border;
-    color: $text-main;
-    padding: 5px 8px;
+    color: $bg-light-accent;
     border-radius: 5px;
     cursor: default;
   }

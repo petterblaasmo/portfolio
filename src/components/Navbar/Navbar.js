@@ -1,45 +1,35 @@
 import "./Navbar.scss";
-import { useState } from "react";
+import React from "react";
 import { Items } from "../../config";
 import logo from "../../lib/images/logo/logo-white.svg";
 
 const Navbar = () => {
-  const [hamburger, setHamburger] = useState(false);
+  const [scroll, setScroll] = React.useState(0);
+
+  window.addEventListener("scroll", (e) => {
+    setScroll(e.target.scrollingElement.scrollTop);
+  });
 
   const ListItems = () => {
     return Items.map((item, i) => {
       return (
         <li>
-          <a href={`#${item.toLowerCase()}`}>{item}</a>
+          <a href={`#${item.toLowerCase()}`}>
+            <b>0{i + 1}.</b> {item}
+          </a>
         </li>
       );
     });
   };
 
   return (
-    <nav>
+    <nav className={scroll > 0 ? "box-shadow" : ""}>
       <div className="first" onClick={() => (window.location.href = "/")}>
         <img src={logo} alt="logo" />
       </div>
-
-      <div className="hamburger" onClick={() => setHamburger(!hamburger)}>
-        <div
-          className="top"
-          style={{
-            width: hamburger ? "20px" : null,
-            transform: hamburger ? "rotate(45deg)" : null,
-            marginBottom: hamburger ? "0" : null,
-          }}
-        ></div>
-        <div
-          className="bot"
-          style={{
-            width: hamburger ? "20px" : null,
-            transform: hamburger ? "rotate(-45deg)" : null,
-            marginTop: hamburger ? "-2px" : null,
-          }}
-        ></div>
-      </div>
+      <ul className="second">
+        <ListItems />
+      </ul>
     </nav>
   );
 };

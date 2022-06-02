@@ -28,7 +28,7 @@ class Information extends Component {
 
   render() {
     const { playing, discord } = this.state;
-    console.log(playing);
+    const artist = playing?.artist?.split(",")[0];
     return (
       <div className="info">
         <a
@@ -44,7 +44,9 @@ class Information extends Component {
                 : playing?.title}
               {playing?.isPlaying ? "" : <p className="paused">Paused</p>}
             </h1>
-            <h2>{playing?.artist}</h2>
+            <h2>
+              {artist?.length > 20 ? artist.slice(0, 15) + "..." : artist}
+            </h2>
           </div>
         </a>
 

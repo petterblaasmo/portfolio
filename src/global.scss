@@ -1,4 +1,4 @@
-$box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
+$box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
 $bg-main: #111116;
 $bg-secondary: #0e0e12;
 $bg-dark-accent: #22222b;
@@ -7,4 +7,7 @@ $bg-light-accent: #545462;
 $bg-lightest-accent: #565665;
 $bg-purple: #7358d9;
 $bg-purple-accent: #694fcb;
-$text-main: #fff;
+$text-main: $bg-lightest-accent;
+$text-header: #fff;
+$distance: 50px;
+$nav-height: 60px;

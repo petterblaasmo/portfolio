@@ -3,7 +3,6 @@
 $border: 1px solid rgba(0, 0, 0, 0.15);
 
 .socials {
-  $distance: 20px;
   position: fixed;
   left: $distance;
   bottom: $distance;
@@ -15,21 +14,21 @@ $border: 1px solid rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
     a {
-      width: 40px;
-      height: 40px;
-      background: $bg-dark-accent;
-      border-radius: 100%;
-      font-size: 15px;
+      height: 30px;
+      width: 30px;
+      font-size: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: all 0.2s;
-      margin-top: 7.5px;
+      margin-top: 15px;
       text-decoration: none;
       color: $bg-lightest-accent;
-      box-shadow: $box-shadow;
-      border: $border;
       cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        color: $bg-purple;
+      }
     }
   }
 }

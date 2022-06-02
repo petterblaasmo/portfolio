@@ -1,0 +1,66 @@
+@import "../../global.scss";
+
+#work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .work-container {
+    width: 600px;
+  }
+  .work-flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .selector {
+      list-style: none;
+      .active {
+        background: rgba($bg-purple, 0.1);
+        color: $bg-purple;
+        border-left: 2px solid $bg-purple;
+        cursor: default;
+      }
+      li {
+        width: 100%;
+        font-size: 12px;
+        padding: 8px 10px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        transition: all 0.2s;
+        color: $text-main;
+        border-left: 2px solid rgba($bg-purple, 0.3);
+        cursor: pointer;
+        &:hover {
+          color: $bg-purple;
+          background: rgba($bg-purple, 0.1);
+        }
+      }
+    }
+    .job-info {
+      margin-left: 50px;
+      flex-grow: 1;
+      h1 {
+        font-weight: 500 !important;
+        font-size: 20px;
+        color: $text-header;
+        b {
+          font-weight: 500;
+          color: $bg-purple;
+        }
+        a {
+          font-weight: 500;
+        }
+      }
+      h2 {
+        font-size: 10px;
+        font-weight: 500;
+        opacity: 0.6;
+        color: $text-header;
+        margin-bottom: 15px;
+      }
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+}

@@ -2,38 +2,32 @@
 
 #home {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   .container {
-    &:hover {
-      cursor: default;
+    $margin: 25px;
+    color: $text-header;
+    .suddle {
+      color: $bg-purple;
+      font-size: 13px;
+      margin-bottom: $margin;
     }
-    position: relative;
-    div {
-      position: absolute;
-      padding: 10px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: $box-shadow;
+    .name,
+    .header {
+      $size: 70px;
+      font-size: $size;
+      line-height: calc($size - 20px);
     }
-    .hello-card {
-      top: -50px;
-      left: -150px;
-      line-height: 18px;
-      p {
-        font-size: 12px;
-        opacity: 0.8;
-      }
-      h1 {
-        font-size: 22px;
-      }
+    .header {
+      color: $bg-light-accent;
+      margin-top: 15px;
     }
-    img {
-      height: 300px;
-      aspect-ratio: 1/1;
-      border-radius: 100%;
-      border: 5px solid #fff;
-      box-shadow: $box-shadow;
+    .info-text {
+      color: $text-main;
+      font-size: 15px;
+      font-weight: 500;
+      width: 400px;
+      margin: $margin 0;
     }
   }
 }

@@ -1,47 +1,29 @@
 import "./Home.scss";
 import React from "react";
-import selfie from "../../lib/images/selfie.jpg";
 import { Information } from "../../components";
-import { Wrapper, Motion } from "../../lib/wrapper";
+import { Wrapper } from "../../lib/wrapper";
 
 const Home = () => {
-  const Cards = () => {
-    const Items = [
-      { name: "Intern", left: -100, top: 200 },
-      { name: "Student", left: 310, top: 0 },
-      { name: "Developer", left: 280, top: 300 },
-    ];
-
-    return Items.map((item, i) => {
-      return (
-        <div
-          style={{
-            left: `${item.left}px`,
-            top: `${item.top}px`,
-            textTransform: "uppercase",
-            fontSize: "12px",
-            fontWeight: "600",
-          }}
-        >
-          {item.name}
-        </div>
-      );
-    });
-  };
-
   return (
     <>
       <div className="container">
-        <div className="hello-card">
-          <p>Hi, I am</p>
-          <h1>Petter Blåsmo 👋</h1>
-        </div>
-        <Cards />
-        <img src={selfie} alt="selfie" />
+        <p className="suddle">Hi, I'm</p>
+        <h1 className="name">Petter Blåsmo</h1>
+        <h1 className="header">I turn ideas into reality</h1>
+        <p className="info-text">
+          I am a web developer who strives to make my clients happy and
+          satisfied with my work; I currently do freelance work while studying
+          at university.
+        </p>
+        <button>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            Read my resume
+          </a>
+        </button>
       </div>
       <Information />
     </>
   );
 };
 
-export default Wrapper(Motion(Home), "home");
+export default Wrapper(Home, "home");

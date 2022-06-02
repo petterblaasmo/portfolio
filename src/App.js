@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Home, About, Projects } from "./pages";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home, About, Experience, Projects } from "./pages";
 import { Navbar, Socials } from "./components";
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
         <Navbar />
         <Home />
         <About />
+        <Experience />
         <Projects />
         <Socials />
       </>

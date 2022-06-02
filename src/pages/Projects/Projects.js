@@ -1,6 +1,6 @@
 import "./Projects.scss";
 import React, { Component } from "react";
-import { Wrapper, Motion } from "../../lib/wrapper";
+import { Wrapper } from "../../lib/wrapper";
 import backend from "../../lib/images/backend.jpg";
 import { Markdown } from "./Markdown";
 import ReactMarkdown from "react-markdown";
@@ -74,4 +74,4 @@ class Projects extends Component {
   }
 }
 
-export default Wrapper(Motion(Projects), "projects");
+export default Wrapper(Projects, "projects");
