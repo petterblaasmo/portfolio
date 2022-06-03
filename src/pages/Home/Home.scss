@@ -5,6 +5,32 @@
   align-items: center;
   justify-content: center;
   .container {
+    .figure {
+      border-radius: 25%;
+      background: $bg-dark-accent;
+      position: absolute;
+      transform: rotate(45deg);
+      z-index: -1;
+    }
+    .figure-big {
+      top: 0px;
+      right: 70%;
+      width: 600px;
+      height: 600px;
+      transition: transform 0.25s ease 0s;
+    }
+    .figures {
+      .figure {
+        &:nth-child(odd) {
+          background: $bg-light-accent;
+          width: 30px;
+        }
+        &:nth-child(even) {
+          background: $bg-dark-accent;
+          width: 80px;
+        }
+      }
+    }
     $margin: 25px;
     color: $text-header;
     .suddle {

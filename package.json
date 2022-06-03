@@ -12,6 +12,7 @@
     "querystring": "^0.2.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-intersection-observer": "^9.2.2",
     "react-markdown": "^8.0.3",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",

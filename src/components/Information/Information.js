@@ -1,7 +1,8 @@
 import "./Information.scss";
 
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import axios from "axios";
+import { motion, useViewportScroll } from "framer-motion";
 import { API_URL } from "../../config";
 
 class Information extends Component {
@@ -39,9 +40,7 @@ class Information extends Component {
           <img src={playing?.albumImageUrl} alt="playing" />
           <div className="song">
             <h1>
-              {playing.title?.length > 20
-                ? playing?.title.slice(0, 15) + "..."
-                : playing?.title}
+              <b className="title">{playing?.title}</b>
               {playing?.isPlaying ? "" : <p className="paused">Paused</p>}
             </h1>
             <h2>

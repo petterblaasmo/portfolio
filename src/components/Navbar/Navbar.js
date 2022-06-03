@@ -23,7 +23,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={scroll > 0 ? "box-shadow" : ""}>
+    <nav className={scroll > 0 ? "nav-box-shadow" : ""}>
       <div className="first" onClick={() => (window.location.href = "/")}>
         <img src={logo} alt="logo" />
       </div>

@@ -1,11 +1,11 @@
 @import "../../global.scss";
 
-.box-shadow {
+.nav-box-shadow {
   box-shadow: $box-shadow;
   transition: box-shadow 0.2s;
-  background: rgba($bg-secondary, 0.8);
-  backdrop-filter: blur(5px);
+  background: $bg-secondary;
 }
+
 nav {
   z-index: 1000;
   position: fixed;
@@ -23,7 +23,6 @@ nav {
     align-items: center;
     cursor: pointer;
     img {
-      box-shadow: $box-shadow;
       height: 40px;
       aspect-ratio: 1/1;
     }
