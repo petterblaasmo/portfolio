@@ -34,8 +34,8 @@ const Home = () => {
                   width: figure.width ? figure.width : null,
                   aspectRatio: "1/1",
                   top: figure.top - scroll,
-                  transform: `rotate(45deg) scale(${1 - scroll / 400})`,
-                  transition: "transform top .2s",
+                  transform: `rotate(45deg)`,
+                  transition: "all .2s",
                 }}
               ></div>
             );

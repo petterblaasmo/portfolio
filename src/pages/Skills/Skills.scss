@@ -1,0 +1,56 @@
+@import "../../global.scss";
+
+#skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  $text: 50%;
+  $margin-text: 25px;
+  .skill-page {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text {
+    color: $text-main;
+    font-size: 20px;
+    width: $text;
+    margin-right: $margin-text;
+    p:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+  }
+  .skills {
+    color: rgba($text-header, 0.8);
+    width: calc(100% - $text - $margin-text);
+    .category {
+      &:not(:first-of-type) {
+        margin-top: 25px;
+      }
+      .progress-bar {
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+        h1 {
+          font-weight: 500;
+          font-size: 15px;
+        }
+        .progress {
+          position: relative;
+          height: 2px;
+          width: 100%;
+          background: $bg-semi-dark-accent;
+          .actual {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background: $bg-purple;
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,7 +10,7 @@ const Wrapper = (Component, id) =>
         id={id}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         <Component />
         <Pagination active={id} />

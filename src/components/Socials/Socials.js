@@ -1,6 +1,7 @@
 import "./Socials.scss";
 import { SocialIcons } from "../../config";
 import { Tooltip } from "../../lib/functions";
+import { Icon } from "../../lib/icons";
 
 const Socials = () => {
   return (
@@ -9,20 +10,15 @@ const Socials = () => {
         return (
           <>
             <li key={icon.name + index}>
-              <Tooltip
-                text={`${icon.name[0].toUpperCase()}${icon.name.slice(1)}`}
-                align="right"
-                code={
-                  <a
-                    className="exclude"
-                    href={icon.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className={`fab fa-${icon.icon}`}></i>
-                  </a>
-                }
-              />
+              <a
+                className="exclude"
+                href={icon.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icon name={icon.name} />
+              </a>
+
               {/*<p className="social">{`${icon.name[0].toUpperCase()}${icon.name.slice(
                 1
               )}`}</p>*/}

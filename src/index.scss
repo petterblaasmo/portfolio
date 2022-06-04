@@ -24,7 +24,11 @@ body {
   &:first-of-type {
     height: 100vh;
   }
-  height: calc(100vh - $nav-height);
+  max-height: calc(100vh - $nav-height);
+  &:not(:first-of-type) {
+    scroll-margin-top: calc($nav-height + 15vh);
+    margin-bottom: 30vh;
+  }
 }
 
 a {
@@ -107,5 +111,169 @@ button {
     color: $text-main;
     font-family: $font-monospace;
     font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .pagination,
+  .socials {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .info {
+    display: none !important;
+  }
+
+  nav {
+    position: absolute;
+    top: 0 !important;
+  }
+
+  * {
+    word-break: break-word;
+  }
+
+  .section {
+    margin-top: 200px;
+    height: auto !important;
+    max-height: unset !important;
+    .section-header {
+      b,
+      hr {
+        display: none !important;
+      }
+    }
+  }
+
+  #about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .about-me {
+      width: auto !important;
+      margin: 0 20px;
+    }
+    .about-img {
+      margin-top: 50px;
+      align-self: auto !important;
+      border-radius: 10px !important;
+      transform: rotate(0) !important;
+      height: 90% !important;
+      max-height: 500px;
+      max-width: 500px;
+      width: 90% !important;
+      img {
+        transform: rotate(0) !important;
+      }
+    }
+  }
+
+  #projects {
+    width: auto !important;
+    word-break: break-word !important;
+    .projects {
+      $p-width: 250px;
+      $margin: 10px;
+      $padding: 30px;
+      width: 80vw !important;
+      li {
+        margin: 10px 0 !important;
+        width: 100% !important;
+      }
+    }
+  }
+
+  #skills {
+    .skill-page {
+      width: 100% !important;
+      flex-direction: column !important;
+      .text {
+        margin-right: 0 !important;
+        margin-bottom: 50px;
+        width: 80%;
+      }
+      .skills {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  nav {
+    ul {
+      li {
+        b {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #home {
+    .container {
+      margin: 0 20px !important;
+      h1 {
+        font-size: 30px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .work-container {
+    width: auto !important;
+    margin: 0 20px;
+    .work-flex {
+      flex-grow: 0 !important;
+      word-break: break-word !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      .selector {
+        display: flex;
+        margin-bottom: 50px;
+        .active {
+          border-bottom: 2px solid $bg-purple !important;
+        }
+        li {
+          border-radius: 3px 3px 0 0 !important;
+          border-left: 0 !important;
+          border-bottom: 2px solid rgba($bg-purple, 0.3) !important;
+        }
+      }
+      .job-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 !important;
+        overflow: hidden !important;
+        li {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  nav {
+    ul {
+      display: none !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .figure:not(.figure-big) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #projects {
+    display: none !important;
   }
 }

@@ -30,13 +30,10 @@ const About = () => {
           </a>
           .
         </p>
-        <p>Here are a few of the tools I use daily:</p>
-        <div className="lists">
-          <List array={["ES6 JavaScript", "React.JS"]} />
-          <List array={["Express.JS", "MongoDB"]} />
-        </div>
       </div>
-      <img src={selfie} alt="" />
+      <div className="about-img">
+        <img src={selfie} alt="" />
+      </div>
     </>
   );
 };

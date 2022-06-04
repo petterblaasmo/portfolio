@@ -4,77 +4,39 @@ import backend from "./lib/images/backend.jpg";
 import freelance from "./lib/images/freelance.jpg";
 
 export const API_URL = "http://localhost:9000";
+export const Skills = {
+  category: [
+    { type: "Front-End", progress: 100 },
+    { type: "Back-End", progress: 80 },
+  ],
+
+  individual: [
+    { type: "React.js", progress: 100 },
+    { type: "SCSS", progress: 90 },
+    { type: "Express.js", progress: 80 },
+    { type: "MongoDB", progress: 70 },
+  ],
+};
 
 export const SocialIcons = [
   {
-    name: "linkedin",
-    icon: "linkedin-in",
+    name: "Linkedin",
     href: "https://www.linkedin.com/in/petterblaasmo/",
   },
   {
-    name: "github",
-    icon: "github",
+    name: "Github",
     href: "https://github.com/petterblaasmo",
   },
   {
-    name: "instagram",
-    icon: "instagram",
+    name: "Instagram",
     href: "https://www.instagram.com/petterblaasmo/",
   },
   {
-    name: "discord",
-    icon: "discord",
-    href: "https://discord.com/users/216260135771701248",
+    name: "Twitter",
+    href: "https://www.twitter.com/petterblaasmo",
   },
 ];
-
 export const Items = ["About", "Work", "Projects", "Skills", "Contact"];
-export const AboutInfo = [
-  {
-    title: "Discord Developer",
-    description: (
-      <p>
-        I develop discord bots for my projects and projects for smaller
-        communities, I've been a part of the NFT discord scene recently.
-      </p>
-    ),
-    img: discord,
-  },
-  {
-    title: "Backend Developer",
-    description: (
-      <p>
-        I enjoy creating the backend of different types of applications, it is
-        one of my stronger sides when it comes to development.
-      </p>
-    ),
-
-    img: backend,
-  },
-  {
-    title: "Frontend Developer",
-    description: (
-      <p>
-        I also enjoy creating the frontend from time to time, it isn't my
-        favorite aspect of programming, but it's alright sometimes.
-      </p>
-    ),
-    img: frontend,
-  },
-  {
-    title: "Freelance Developer",
-    description: (
-      <p>
-        Whist studying I also do some freelance work. This is mainly through{" "}
-        <a href="https://upwork.com" target="_blank" rel="noreferrer">
-          Upwork
-        </a>{" "}
-        working for startup businesses.
-      </p>
-    ),
-    img: freelance,
-  },
-];
 export const Work = [
   {
     name: "Blåsmo AS",

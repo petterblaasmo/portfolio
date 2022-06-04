@@ -45,7 +45,7 @@
     .header {
       $size: 70px;
       font-size: $size;
-      line-height: calc($size - 10px);
+      line-height: 1.1;
     }
     .header {
       color: $bg-light-accent;
@@ -55,7 +55,8 @@
       color: $text-main;
       font-size: 18px;
       font-weight: 500;
-      width: 500px;
+      max-width: 500px;
+      width: auto;
       margin: $margin 0;
     }
     a {
