@@ -9,6 +9,19 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $bg-purple;
+  border-radius: 10px;
+}
+
 .monospace {
   font-family: $font-monospace;
 }
@@ -114,6 +127,16 @@ button {
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  footer {
+    .message {
+      button {
+        display: none;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1100px) {
   .pagination,
   .socials {
@@ -199,6 +222,16 @@ button {
       }
     }
   }
+
+  footer {
+    .message {
+      div {
+        h1 {
+          font-size: 40px !important;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 850px) {
@@ -256,6 +289,57 @@ button {
       }
     }
   }
+
+  #contact {
+    .contact-container {
+      .contact-flex {
+        form {
+          ul {
+            justify-content: center !important;
+            align-items: center !important;
+            flex-direction: column !important;
+            .right {
+              margin-left: 0 !important;
+            }
+            div {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              label {
+                display: none;
+              }
+              li {
+                width: 100% !important;
+                display: flex;
+                justify-content: center;
+                input,
+                textarea {
+                  width: 200px !important;
+                  min-width: 200px !important;
+                  max-width: 200px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .MuiSlider-root {
+    min-width: 150px !important;
+    width: auto !important;
+  }
+
+  footer {
+    .message {
+      div {
+        h1 {
+          font-size: 30px !important;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -270,10 +354,43 @@ button {
   .figure:not(.figure-big) {
     display: none;
   }
+
+  footer {
+    height: 300px !important;
+    .message {
+      display: none !important;
+    }
+    .content {
+      margin-top: 50px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  footer {
+    height: 500px !important;
+    .content {
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 400px) {
   #projects {
     display: none !important;
+  }
+
+  footer {
+    .copyright {
+      height: 100px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .MuiSlider-root {
+    width: 100px !important;
   }
 }

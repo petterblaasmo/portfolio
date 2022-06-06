@@ -1,8 +1,7 @@
 import "./Information.scss";
 
-import React, { Component, useEffect, useState } from "react";
+import React, { Component } from "react";
 import axios from "axios";
-import { motion, useViewportScroll } from "framer-motion";
 import { API_URL } from "../../config";
 
 class Information extends Component {

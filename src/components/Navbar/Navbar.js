@@ -13,7 +13,7 @@ const Navbar = () => {
   const ListItems = () => {
     return Items.map((item, i) => {
       return (
-        <li>
+        <li key={i}>
           <a className="exclude monospace" href={`#${item.toLowerCase()}`}>
             <b>0{i + 1}.</b> {item}
           </a>

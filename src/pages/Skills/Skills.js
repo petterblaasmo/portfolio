@@ -15,7 +15,7 @@ const SkillPage = () => {
             initial={{ width: 0 }}
             whileInView={{ width: progress + "%" }}
             transition={{ duration: 1.2 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="actual"
           ></motion.div>
         </div>
@@ -50,14 +50,18 @@ const SkillPage = () => {
       <div className="skills">
         <div className="category">
           <h1>Category</h1>
-          {Skills.category.map((skill) => {
-            return <RenderBar type={skill.type} progress={skill.progress} />;
+          {Skills.category.map((skill, i) => {
+            return (
+              <RenderBar key={i} type={skill.type} progress={skill.progress} />
+            );
           })}
         </div>
         <div className="category">
           <h1>Tools</h1>
-          {Skills.individual.map((skill) => {
-            return <RenderBar type={skill.type} progress={skill.progress} />;
+          {Skills.individual.map((skill, i) => {
+            return (
+              <RenderBar key={i} type={skill.type} progress={skill.progress} />
+            );
           })}
         </div>
       </div>

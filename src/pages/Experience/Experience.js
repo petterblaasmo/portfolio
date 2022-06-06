@@ -20,6 +20,7 @@ const Experience = () => {
           {Work.map((work, i) => {
             return (
               <li
+                key={i}
                 onClick={() => setActive(i)}
                 className={i === active ? "active" : ""}
               >
@@ -33,7 +34,7 @@ const Experience = () => {
             {job.category}{" "}
             <b>
               @{" "}
-              <a href={job.link} target="_blank" rel="norefferer">
+              <a href={job.link} target="_blank" rel="noreferrer">
                 {job.name}
               </a>
             </b>

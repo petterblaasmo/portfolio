@@ -1,8 +1,3 @@
-import discord from "./lib/images/discord.png";
-import frontend from "./lib/images/frontend.jpg";
-import backend from "./lib/images/backend.jpg";
-import freelance from "./lib/images/freelance.jpg";
-
 export const API_URL = "http://localhost:9000";
 export const Skills = {
   category: [

@@ -1,5 +1,5 @@
 import "./Projects.scss";
-import React, { Component } from "react";
+import React from "react";
 import { Wrapper } from "../../lib/wrapper";
 import { projects } from "./project.js";
 import { Icon } from "../../lib/icons";
@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   const IconLink = ({ icon, link }) => (
-    <a className={`exclude icon-link ${icon}`} href={link}>
-      <Icon name={icon} />
-    </a>
+    <div className="icon-link">
+      <Icon onClick={() => (window.location.href = link)} name={icon} />
+    </div>
   );
 
   return (
@@ -44,7 +44,7 @@ const Projects = () => {
                   className="exclude"
                   href={project.link}
                   target="_blank"
-                  rel="norefferer"
+                  rel="noreferrer"
                 >
                   <div className="header">
                     {project.github ? (
@@ -56,7 +56,7 @@ const Projects = () => {
                   <p className="description">{project.description}</p>
                   <div className="tags">
                     {project.tags.map((tag) => (
-                      <p>{tag}</p>
+                      <p key={tag}>{tag}</p>
                     ))}
                   </div>
                 </a>
