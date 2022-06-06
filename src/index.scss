@@ -135,6 +135,15 @@ button {
       }
     }
   }
+
+  #contact {
+    .contact-flex {
+      flex-direction: column;
+      .contact-text {
+        margin-bottom: 50px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1100px) {

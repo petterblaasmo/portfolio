@@ -70,110 +70,156 @@ const Contact = () => {
     setTime(0);
   };
 
+  const days = [
+    { day: "Monday", available: true },
+    { day: "Tuesday", available: true },
+    { day: "Wednesday", available: true },
+    { day: "Thursday", available: true },
+    { day: "Friday", available: true },
+    { day: "Saturday", available: false },
+    { day: "Sunday", available: false },
+  ];
+
+  const DayMessage = () => {
+    const current = days[new Date().getDay() - 0];
+
+    const NextAvailable = () => (
+      <h2>
+        I will be available on <b>Monday</b>
+      </h2>
+    );
+
+    return (
+      <>
+        <h1>
+          It's <b>{current.day}</b> and I'm{" "}
+          <b style={{ color: current.available ? "#9bf74f" : "#f74f4f" }}>
+            {current.available ? "available" : "not available"}
+          </b>
+          .
+        </h1>
+        {!current.available ? <NextAvailable /> : null}
+      </>
+    );
+  };
+
   return (
     <>
       <div className="contact-container">
-        <h1 className="section-header">
-          <b>05.</b>
-          Contact
-          <hr />
-        </h1>
-        <div className="contact-flex">
-          <form>
-            <ul>
-              <div className="left">
-                <li>
-                  <label>Name</label>
-                  <input
-                    ref={nameRef}
-                    type="text"
-                    name="name"
-                    placeholder="Your name"
-                    onFocus={() => changeRef(nameRef, "#7358d9")}
-                    onBlur={(e) => setName(e.target.value)}
-                  />
-                </li>
-                <li>
-                  <label>Email</label>
-                  <input
-                    ref={emailRef}
-                    type="email"
-                    name="email"
-                    placeholder="Your email"
-                    onFocus={() => changeRef(emailRef, "#7358d9")}
-                    onBlur={(e) => setEmail(e.target.value)}
-                  />
-                </li>
-                <li>
-                  <label>Message</label>
-                  <textarea
-                    ref={messageRef}
-                    placeholder="General message"
-                    onFocus={() => changeRef(messageRef, "#7358d9")}
-                    onBlur={(e) => setMessage(e.target.value)}
-                  />
-                </li>
-                <li
-                  className="checkbox-li"
-                  onClick={(e) => setCheckbox(!checkbox)}
+        <div className="contact-flex-two">
+          <h1 className="section-header">
+            <b>05.</b>
+            Contact
+            <hr />
+          </h1>
+          <div className="contact-flex">
+            <div className="contact-text">
+              <p>
+                There are multiple reasons you would want to use the contact
+                form; maybe you would like to collaborate with me on a project
+                or hire me to help you develop your product. Do not hesitate to
+                message me with any of your inquiries.
+              </p>
+              <DayMessage />
+            </div>
+            <form>
+              <ul>
+                <div className="left">
+                  <li>
+                    <label>Name</label>
+                    <input
+                      ref={nameRef}
+                      type="text"
+                      name="name"
+                      placeholder="Your name"
+                      onFocus={() => changeRef(nameRef, "#7358d9")}
+                      onBlur={(e) => setName(e.target.value)}
+                    />
+                  </li>
+                  <li>
+                    <label>Email</label>
+                    <input
+                      ref={emailRef}
+                      type="email"
+                      name="email"
+                      placeholder="Your email"
+                      onFocus={() => changeRef(emailRef, "#7358d9")}
+                      onBlur={(e) => setEmail(e.target.value)}
+                    />
+                  </li>
+                  <li>
+                    <label>Message</label>
+                    <textarea
+                      ref={messageRef}
+                      placeholder="General message"
+                      onFocus={() => changeRef(messageRef, "#7358d9")}
+                      onBlur={(e) => setMessage(e.target.value)}
+                    />
+                  </li>
+                  <li
+                    className="checkbox-li"
+                    onClick={(e) => setCheckbox(!checkbox)}
+                  >
+                    <div className="checkbox">
+                      <div
+                        className={`check${checkbox ? " checked" : ""}`}
+                      ></div>
+                    </div>
+                    <p>Looking to hire me</p>
+                  </li>
+                </div>
+                <div
+                  className="right"
+                  style={{ display: checkbox ? "block" : "none" }}
                 >
-                  <div className="checkbox">
-                    <div className={`check${checkbox ? " checked" : ""}`}></div>
-                  </div>
-                  <p>Looking to hire me</p>
-                </li>
-              </div>
-              <div
-                className="right"
-                style={{ display: checkbox ? "block" : "none" }}
-              >
-                <li>
-                  <label>Project message</label>
-                  <textarea
-                    ref={projectMessageRef}
-                    onFocus={() => changeRef(projectMessageRef, "#7358d9")}
-                    placeholder="Project information"
-                    onBlur={(e) => setProjectMessage(e.target.value)}
-                  />
-                </li>
-                <li>
-                  <label>Budget: ${budget}+</label>
-                  <div className="slider">
-                    <Slider
-                      aria-label="Budget"
-                      value={budget}
-                      getAriaValueText={valuetext}
-                      valueLabelDisplay="auto"
-                      step={100}
-                      min={0}
-                      max={5000}
-                      onChange={handleSlider}
+                  <li>
+                    <label>Project message</label>
+                    <textarea
+                      ref={projectMessageRef}
+                      onFocus={() => changeRef(projectMessageRef, "#7358d9")}
+                      placeholder="Project information"
+                      onBlur={(e) => setProjectMessage(e.target.value)}
                     />
-                  </div>
-                </li>
-                <li>
-                  <label>
-                    Duration:{" "}
-                    {time === 0
-                      ? "As fast as possible"
-                      : `${time} month${time === 1 ? "" : "s"}+`}
-                  </label>
-                  <div className="slider">
-                    <Slider
-                      aria-label="Duration"
-                      value={time}
-                      getAriaValueText={valuetext}
-                      valueLabelDisplay="auto"
-                      step={1}
-                      min={0}
-                      max={6}
-                      onChange={handleSlider2}
-                    />
-                  </div>
-                </li>
-              </div>
-            </ul>
-          </form>
+                  </li>
+                  <li>
+                    <label>Budget: ${budget}+</label>
+                    <div className="slider">
+                      <Slider
+                        aria-label="Budget"
+                        value={budget}
+                        getAriaValueText={valuetext}
+                        valueLabelDisplay="auto"
+                        step={100}
+                        min={0}
+                        max={5000}
+                        onChange={handleSlider}
+                      />
+                    </div>
+                  </li>
+                  <li>
+                    <label>
+                      Duration:{" "}
+                      {time === 0
+                        ? "As fast as possible"
+                        : `${time} month${time === 1 ? "" : "s"}+`}
+                    </label>
+                    <div className="slider">
+                      <Slider
+                        aria-label="Duration"
+                        value={time}
+                        getAriaValueText={valuetext}
+                        valueLabelDisplay="auto"
+                        step={1}
+                        min={0}
+                        max={6}
+                        onChange={handleSlider2}
+                      />
+                    </div>
+                  </li>
+                </div>
+              </ul>
+            </form>
+          </div>
         </div>
         <button onClick={handleSubmit}>Contact me</button>
       </div>
