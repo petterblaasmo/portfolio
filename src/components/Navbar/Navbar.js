@@ -6,7 +6,7 @@ import logo from "../../lib/images/logo/logo-white.svg";
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    clipPath: `circle(${height * 2 + 200}px at 35px 35px)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -14,7 +14,7 @@ const sidebar = {
     },
   }),
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
+    clipPath: "circle(30px at 35px 35px)",
     transition: {
       delay: 0.5,
       type: "spring",

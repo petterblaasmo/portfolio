@@ -81,7 +81,7 @@ const Contact = () => {
   ];
 
   const DayMessage = () => {
-    const current = days[new Date().getDay() - 0];
+    const current = days[new Date().getDay() - 1];
 
     const NextAvailable = () => (
       <h2>
