@@ -264,6 +264,17 @@ button {
   }
 }
 
+@media only screen and (max-width: 750px) {
+  nav {
+    padding: 25px 0;
+    height: auto !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    position: absolute !important;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .work-container {
     width: auto !important;
@@ -351,10 +362,16 @@ button {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 600px) {
   nav {
     ul {
-      display: none !important;
+      margin: 0 !important;
+      li {
+        font-size: 12px !important;
+      }
+      button {
+        display: none;
+      }
     }
   }
 }
@@ -394,6 +411,24 @@ button {
   footer {
     .copyright {
       height: 100px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  nav {
+    ul {
+      li {
+        font-size: 10px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  nav {
+    ul {
+      display: none !important;
     }
   }
 }
