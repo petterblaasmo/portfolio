@@ -30,9 +30,6 @@ const Navbar = () => {
         </div>
         <ul className="second">
           <ListItems />
-          <a className="exclude" href="/resume.pdf">
-            <button className="monospace small">Resume</button>
-          </a>
         </ul>
       </nav>
     </>

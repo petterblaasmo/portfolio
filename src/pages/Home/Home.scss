@@ -32,7 +32,7 @@
         }
       }
     }
-    $margin: 25px;
+    $margin: 20px;
     color: $text-header;
     .suddle {
       color: $bg-purple;
@@ -46,11 +46,14 @@
     .header {
       $size: 70px;
       font-size: $size;
-      line-height: 1.1;
+      line-height: 1;
     }
     .header {
       color: $bg-light-accent;
       margin-top: 15px;
+      b {
+        color: $bg-purple;
+      }
     }
     .info-text {
       color: $text-main;
@@ -73,4 +76,30 @@
   stroke-width: 2;
   stroke-linejoin: round;
   stroke-linecap: round;
+}
+
+.resume {
+  display: flex;
+  align-items: center;
+  &:hover {
+    .resume-btn {
+      color: #fff;
+    }
+    svg {
+      fill: #fff;
+      padding-left: 15px;
+    }
+  }
+  .resume-btn {
+    transition: all 0.2s;
+    color: #bbb;
+    letter-spacing: 1.2px;
+  }
+  svg {
+    transition: all 0.2s;
+    height: 40px !important;
+    fill: #bbb;
+    padding-left: 10px;
+    padding-top: 3px;
+  }
 }

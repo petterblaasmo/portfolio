@@ -31,7 +31,7 @@ const Footer = () => {
       <div className="copyright">
         <p>
           <i className="fas fa-copyright" /> 2021-{new Date().getFullYear()}{" "}
-          <a href="/">blaasmo.dev</a> | All rights reserved.
+          <a href="/">petterblaasmo.com</a> | All rights reserved.
         </p>
       </div>
     </footer>

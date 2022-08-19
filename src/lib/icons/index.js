@@ -7,3 +7,4 @@ export { default as IconInstagram } from "./instagram";
 export { default as IconLinkedin } from "./linkedin";
 export { default as IconStar } from "./star";
 export { default as IconTwitter } from "./twitter";
+export { default as Arrow } from "./arrow";

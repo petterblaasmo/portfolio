@@ -45,20 +45,15 @@
       display: flex;
       height: auto;
       width: $p-width;
-      background: $bg-dark-accent;
+      background: $bg-main;
       padding: $padding;
-      border-radius: 4px;
+      border-radius: 9px;
       align-self: stretch;
       margin-bottom: $margin;
       transition: all 0.2s;
       &:hover {
-        box-shadow: 0 0 40px -20px rgba($bg-light-accent, 0.5);
-        transform: scale(1.015);
-        a {
-          .title {
-            color: $bg-purple;
-          }
-        }
+        box-shadow: 0 0 40px -20px rgba($bg-main, 0.5);
+        transform: scale(0.95);
       }
       a {
         display: flex;

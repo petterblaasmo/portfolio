@@ -56,3 +56,14 @@ export const Work = [
     ],
   },
 ];
+export const School = [
+  {
+    side: "Forkurs",
+    name: "NTNU",
+    link: "https://ntnu.no",
+    category: "Forkurs",
+    from: "August 2022",
+    to: "Present",
+    points: ["Taking classes so I can study Informatics next school year"],
+  },
+];

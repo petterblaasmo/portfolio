@@ -53,13 +53,16 @@ footer {
       display: flex;
       li {
         padding: 8px 12px;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        border-bottom: 2px solid rgba($bg-purple, 0.3);
         transition: 0.2s all;
-        &:hover {
-          background: rgba($bg-purple, 0.1);
-          border-bottom: 2px solid $bg-purple;
+        color: $text-header;
+        font-size: 13px;
+        a {
+          color: #bbb;
+          text-transform: uppercase;
+          font-weight: 700;
+          &:hover {
+            color: #fff;
+          }
         }
       }
     }

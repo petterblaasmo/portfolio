@@ -2,14 +2,16 @@
 
 .nav-box-shadow {
   box-shadow: $box-shadow;
-  transition: box-shadow 0.2s;
-  background: $bg-secondary;
+  transition: all 0.2s;
+  background: rgba($bg-secondary, 0.8);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 nav {
   z-index: 1000;
   position: fixed;
-  background: $bg-secondary;
+  //background: $bg-secondary;
   height: $nav-height;
   width: 100%;
   display: flex;
@@ -34,13 +36,14 @@ nav {
     margin-right: $margin;
     li {
       padding: 8px 12px;
-      border-bottom: 1px solid rgba($bg-purple, 0.3);
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
       transition: all 0.2s;
-      &:hover {
-        background: rgba($bg-purple, 0.1);
-        border-bottom: 1px solid $bg-purple;
+      a {
+        font-size: 12px;
+        font-weight: 700;
+        color: #bbb;
+        &:hover {
+          color: #fff;
+        }
       }
     }
     button {

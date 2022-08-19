@@ -50,7 +50,6 @@ const Projects = () => {
                     {project.github ? (
                       <IconLink icon="Github" link={project.github} />
                     ) : null}
-                    <IconLink icon="External" />
                   </div>
                   <h1 className="title">{project.project}</h1>
                   <p className="description">{project.description}</p>

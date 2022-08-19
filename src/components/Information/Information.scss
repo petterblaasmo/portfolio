@@ -9,9 +9,8 @@
   align-items: flex-end;
   .spotify,
   .discord {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom: 2px solid $bg-purple;
+    box-shadow: box-shadow(1.1);
+    border-radius: 5px;
     text-decoration: none;
     padding: 5px;
     background: $bg-dark-accent;

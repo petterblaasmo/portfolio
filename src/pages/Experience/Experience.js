@@ -1,12 +1,14 @@
 import "./Experience.scss";
 import { Wrapper } from "../../lib/wrapper";
-import { Work } from "../../config";
+import { Work, School } from "../../config";
 import { useState } from "react";
 import { List } from "../../lib/functions";
 
 const Experience = () => {
   const [active, setActive] = useState(0);
-  const job = Work[active];
+  const ShowList = [...Work, ...School];
+  const job = ShowList[active];
+  console.log(ShowList);
 
   return (
     <div className="work-container">
@@ -17,6 +19,7 @@ const Experience = () => {
       </h1>
       <div className="work-flex">
         <ul className="selector">
+          <p className="work-header">Work</p>
           {Work.map((work, i) => {
             return (
               <li
@@ -25,6 +28,18 @@ const Experience = () => {
                 className={i === active ? "active" : ""}
               >
                 {work.name}
+              </li>
+            );
+          })}
+          <p className="school-header">School</p>
+          {School.map((school, i) => {
+            return (
+              <li
+                key={i + Work.length}
+                onClick={() => setActive(i + Work.length)}
+                className={i + Work.length === active ? "active" : ""}
+              >
+                {school.side || school.name}
               </li>
             );
           })}
