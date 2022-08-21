@@ -287,14 +287,12 @@ button {
       justify-content: center !important;
       .selector {
         display: flex;
+        align-items: center !important;
+        flex-direction: column !important;
         margin-bottom: 50px;
-        .active {
-          border-bottom: 2px solid $bg-purple !important;
-        }
         li {
-          border-radius: 3px 3px 0 0 !important;
-          border-left: 0 !important;
-          border-bottom: 2px solid rgba($bg-purple, 0.3) !important;
+          border: 0 !important;
+          border-radius: 3px !important;
         }
       }
       .job-info {

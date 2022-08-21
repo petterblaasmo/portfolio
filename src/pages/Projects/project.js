@@ -19,7 +19,7 @@ export const projects = [
     link: "/",
     description:
       "I created this custom portfolio to showcase to my clients and for future interviews.",
-    tags: ["React.js", "Express.js", "Mongo"],
+    tags: ["React.js", "Express.js", "MongoDB"],
   },
   {
     project: "Celerity Bot",

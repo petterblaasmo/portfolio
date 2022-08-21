@@ -71,17 +71,17 @@ const Contact = () => {
   };
 
   const days = [
+    { day: "Sunday", available: false },
     { day: "Monday", available: true },
     { day: "Tuesday", available: true },
     { day: "Wednesday", available: true },
     { day: "Thursday", available: true },
     { day: "Friday", available: true },
     { day: "Saturday", available: false },
-    { day: "Sunday", available: false },
   ];
 
   const DayMessage = () => {
-    const current = days[new Date().getDay() - 1];
+    const current = days[new Date().getDay()];
 
     const NextAvailable = () => (
       <h2>
