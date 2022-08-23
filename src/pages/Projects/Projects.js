@@ -20,15 +20,6 @@ const Projects = () => {
           Projects
           <hr />
         </h1>
-        <div className="projects-length">
-          <h1>
-            <b>{projects.length}</b> Noteworthy Projects
-          </h1>
-          <h1>
-            <b>{projects.filter((project) => project.github).length}</b> Open
-            Source
-          </h1>
-        </div>
         <div className="projects">
           {projects.map((project, i) => {
             return (
@@ -46,17 +37,20 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <div className="header">
-                    {project.github ? (
-                      <IconLink icon="Github" link={project.github} />
-                    ) : null}
-                  </div>
-                  <h1 className="title">{project.project}</h1>
-                  <p className="description">{project.description}</p>
-                  <div className="tags">
-                    {project.tags.map((tag) => (
-                      <p key={tag}>{tag}</p>
-                    ))}
+                  <img src="" />
+                  <div className="card">
+                    <div className="header">
+                      {project.github ? (
+                        <IconLink icon="Github" link={project.github} />
+                      ) : null}
+                    </div>
+                    <h1 className="title">{project.project}</h1>
+                    <p className="description">{project.description}</p>
+                    <div className="tags">
+                      {project.tags.map((tag) => (
+                        <p key={tag}>{tag}</p>
+                      ))}
+                    </div>
                   </div>
                 </a>
               </motion.li>

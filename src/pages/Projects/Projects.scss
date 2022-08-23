@@ -1,6 +1,7 @@
 @import "../../global.scss";
 
 #projects {
+  padding-bottom: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,35 +30,34 @@
     }
   }
   .projects {
-    $p-width: 250px;
+    $p-width: 20%;
     $margin: 10px;
     $padding: 30px;
     display: flex;
-    align-items: center;
-    width: calc(($p-width * 3) + ($padding * 6) + ($margin * 2));
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
     list-style: none;
-    .margin {
-      margin-left: $margin;
-      margin-right: $margin;
-    }
     li {
       display: flex;
-      height: auto;
+      height: 200px;
       width: $p-width;
-      background: $bg-main;
       padding: $padding;
+      margin: $margin;
       border-radius: 9px;
-      align-self: stretch;
-      margin-bottom: $margin;
       transition: all 0.2s;
-      &:hover {
-        box-shadow: 0 0 40px -20px rgba($bg-main, 0.5);
-        transform: scale(0.95);
-      }
       a {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .card {
+          display: flex;
+          flex-direction: column;
+        }
+        img {
+          width: 10px;
+        }
         .header {
           display: flex;
           justify-content: flex-end;
