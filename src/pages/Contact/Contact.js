@@ -38,7 +38,7 @@ const Contact = () => {
       !name.length ||
       !email.length ||
       !message.length ||
-      !projectMessage.length
+      (checkbox && !projectMessage.length)
     ) {
       if (!name.length) errorRef(nameRef);
       if (!email.length) errorRef(emailRef);
@@ -57,7 +57,8 @@ const Contact = () => {
       duration: time,
     };
 
-    await axios.post(API_URL + "/contact", { body });
+    const res = await axios.post(API_URL + "/contact", { body });
+    console.log(res);
     //const contact =
     //const response = contact.data;
 
@@ -112,6 +113,17 @@ const Contact = () => {
             Contact
             <hr />
           </h1>
+          <p className="normal-email">
+            Maybe you prefer sending me an ordinary email instead? Do so{" "}
+            <a
+              href="mailto:petterblaasmo@gmail.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              here
+            </a>
+            !
+          </p>
           <div className="contact-flex">
             <div className="contact-text">
               <p>
@@ -131,9 +143,10 @@ const Contact = () => {
                       ref={nameRef}
                       type="text"
                       name="name"
+                      value={name}
                       placeholder="Your name"
                       onFocus={() => changeRef(nameRef, "#7358d9")}
-                      onBlur={(e) => setName(e.target.value)}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </li>
                   <li>
@@ -142,9 +155,10 @@ const Contact = () => {
                       ref={emailRef}
                       type="email"
                       name="email"
+                      value={email}
                       placeholder="Your email"
                       onFocus={() => changeRef(emailRef, "#7358d9")}
-                      onBlur={(e) => setEmail(e.target.value)}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </li>
                   <li>
@@ -152,33 +166,21 @@ const Contact = () => {
                     <textarea
                       ref={messageRef}
                       placeholder="General message"
+                      value={message}
                       onFocus={() => changeRef(messageRef, "#7358d9")}
-                      onBlur={(e) => setMessage(e.target.value)}
+                      onChange={(e) => setMessage(e.target.value)}
                     />
                   </li>
-                  <li
-                    className="checkbox-li"
-                    onClick={(e) => setCheckbox(!checkbox)}
-                  >
-                    <div className="checkbox">
-                      <div
-                        className={`check${checkbox ? " checked" : ""}`}
-                      ></div>
-                    </div>
-                    <p>Looking to hire me</p>
-                  </li>
                 </div>
-                <div
-                  className="right"
-                  style={{ display: checkbox ? "block" : "none" }}
-                >
+                <div className={`right${checkbox ? " checked" : " unchecked"}`}>
                   <li>
                     <label>Project message</label>
                     <textarea
                       ref={projectMessageRef}
+                      value={projectMessage}
                       onFocus={() => changeRef(projectMessageRef, "#7358d9")}
                       placeholder="Project information"
-                      onBlur={(e) => setProjectMessage(e.target.value)}
+                      onChange={(e) => setProjectMessage(e.target.value)}
                     />
                   </li>
                   <li>
@@ -220,6 +222,12 @@ const Contact = () => {
               </ul>
             </form>
           </div>
+        </div>
+        <div className="checkbox-li" onClick={(e) => setCheckbox(!checkbox)}>
+          <div className="checkbox">
+            <div className={`check${checkbox ? " checked" : ""}`}></div>
+          </div>
+          <p>Looking to hire me</p>
         </div>
         <button onClick={handleSubmit}>Contact me</button>
       </div>

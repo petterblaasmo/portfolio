@@ -243,6 +243,28 @@ button {
   }
 }
 
+@media only screen and (max-width: 1300px) {
+  .tags {
+    p {
+      padding: 0 !important;
+      background: 0 !important;
+      border: 0 !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #skills {
+    margin-top: 400px;
+  }
+  .projects {
+    flex-direction: column;
+    li {
+      width: 100% !important;
+    }
+  }
+}
+
 @media only screen and (max-width: 850px) {
   nav {
     ul {
@@ -402,10 +424,6 @@ button {
 }
 
 @media only screen and (max-width: 400px) {
-  #projects {
-    display: none !important;
-  }
-
   footer {
     .copyright {
       height: 100px !important;

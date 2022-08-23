@@ -2,25 +2,19 @@ import "./Projects.scss";
 import React from "react";
 import { Wrapper } from "../../lib/wrapper";
 import { projects } from "./project.js";
-import { Icon } from "../../lib/icons";
+import { Icon, IconGitHub } from "../../lib/icons";
 import { motion } from "framer-motion";
 
 const Projects = () => {
-  const IconLink = ({ icon, link }) => (
-    <div className="icon-link">
-      <Icon onClick={() => (window.location.href = link)} name={icon} />
-    </div>
-  );
-
   return (
     <>
-      <ul className="projects-container">
+      <div className="projects-container">
         <h1 className="section-header">
           <b>03.</b>
           Projects
           <hr />
         </h1>
-        <div className="projects">
+        <ul className="projects">
           {projects.map((project, i) => {
             return (
               <motion.li
@@ -40,12 +34,35 @@ const Projects = () => {
                   <img src="" />
                   <div className="card">
                     <div className="header">
-                      {project.github ? (
-                        <IconLink icon="Github" link={project.github} />
-                      ) : null}
+                      <h1 className="title">{project.project}</h1>
+                      <div className="icons">
+                        <a
+                          className="exclude"
+                          href={project.link}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          <Icon />
+                        </a>
+                        {project.github ? (
+                          <a
+                            className="exclude"
+                            href={project.github}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                          >
+                            <IconGitHub />
+                          </a>
+                        ) : (
+                          <p className="disabled">
+                            <IconGitHub />
+                          </p>
+                        )}
+                      </div>
                     </div>
-                    <h1 className="title">{project.project}</h1>
-                    <p className="description">{project.description}</p>
+                    <div className="description">
+                      <p>{project.description}</p>
+                    </div>
                     <div className="tags">
                       {project.tags.map((tag) => (
                         <p key={tag}>{tag}</p>
@@ -56,8 +73,8 @@ const Projects = () => {
               </motion.li>
             );
           })}
-        </div>
-      </ul>
+        </ul>
+      </div>
     </>
   );
 };

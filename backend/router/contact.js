@@ -2,9 +2,15 @@ import express from "express";
 import { logger, boldify } from "../functions/index.js";
 import "dotenv/config";
 import { createTransport } from "nodemailer";
+import rateLimit from "express-rate-limit";
 
 const router = express.Router();
 const { GMAIL_USER: user, GMAIL_PASS: password } = process.env;
+
+const limiter = rateLimit({
+  windowMs: 10 * 60 * 1000,
+  max: 2,
+});
 
 const html = (name, email, message, hire, projectMsg, budget, duration) => {
   return `<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
@@ -171,7 +177,7 @@ const mail = async (
   }
 };
 
-router.post("/", async (req, res) => {
+router.post("/", limiter, async (req, res) => {
   const { name, email, message, hire, projectMessage, budget, duration } =
     req.body.body;
   try {

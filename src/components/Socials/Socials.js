@@ -19,6 +19,7 @@ const Socials = () => {
           </li>
         );
       })}
+      <li className="line"></li>
     </ul>
   );
 };

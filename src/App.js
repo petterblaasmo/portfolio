@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Home, About, Experience, Projects, Skills, Contact } from "./pages";
-import { Navbar, Socials, Footer } from "./components";
+import { Navbar, Socials, Footer, Toolbar } from "./components";
 
 class App extends Component {
   constructor(props) {
@@ -20,6 +20,7 @@ class App extends Component {
         <Skills />
         <Contact />
         <Footer />
+        <Toolbar />
       </>
     );
   }

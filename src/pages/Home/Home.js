@@ -4,6 +4,7 @@ import { Information } from "../../components";
 import { Wrapper } from "../../lib/wrapper";
 import { motion } from "framer-motion";
 import { Arrow } from "../../lib/icons";
+import { Items } from "../../config";
 
 const Home = () => {
   const figures = [
@@ -13,12 +14,13 @@ const Home = () => {
     { right: 10, top: 400, width: 150 },
     { right: 15, top: 225, width: 35 },
   ];
-  const RenderFigures = () => {
-    const [scroll, setScroll] = useState(0);
-    window.addEventListener("scroll", (e) =>
-      setScroll(e.target.scrollingElement.scrollTop)
-    );
 
+  const [scroll, setScroll] = useState(0);
+  window.addEventListener("scroll", (e) =>
+    setScroll(e.target.scrollingElement.scrollTop)
+  );
+
+  const RenderFigures = () => {
     return (
       <>
         <div className="figure figure-big"></div>
@@ -68,7 +70,17 @@ const Home = () => {
           <p className="resume-btn monospace">Read my resume</p>
           <Arrow />
         </a>
+        <a className="resume exclude" href="#contact">
+          <p className="resume-btn monospace">Contact me</p>
+          <Arrow />
+        </a>
       </div>
+      <a
+        href={"#" + Items[0].toLowerCase()}
+        className={`scroll${scroll > 0 ? " scrolled" : " opened"}`}
+      >
+        Scroll down
+      </a>
       <Information />
     </>
   );

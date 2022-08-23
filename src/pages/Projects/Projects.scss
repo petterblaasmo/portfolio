@@ -1,7 +1,6 @@
 @import "../../global.scss";
 
 #projects {
-  padding-bottom: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,6 +28,16 @@
       }
     }
   }
+  .projects-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .section-header {
+      align-self: stretch;
+    }
+  }
   .projects {
     $p-width: 20%;
     $margin: 10px;
@@ -37,13 +46,12 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     list-style: none;
     li {
       display: flex;
+      width: 40%;
       height: 200px;
-      width: $p-width;
-      padding: $padding;
       margin: $margin;
       border-radius: 9px;
       transition: all 0.2s;
@@ -51,31 +59,48 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
         .card {
+          position: relative;
+          align-self: stretch;
           display: flex;
           flex-direction: column;
-        }
-        img {
-          width: 10px;
+          border: 1px solid $bg-main;
+          box-shadow: $box-shadow;
+          border-radius: 10px;
+          width: 600px;
         }
         .header {
           display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          .icon-link {
-            height: 20px;
-            width: 20px;
-            color: #fff;
-            opacity: 0.6;
-            cursor: pointer;
-            margin-left: 15px;
-            &:hover {
-              opacity: 1;
-              color: $bg-purple;
+          justify-content: space-between;
+          .icons {
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a,
+            p {
+              margin-left: 10px;
+              height: 20px;
+            }
+            .disabled {
+              opacity: 0.2 !important;
+            }
+            svg {
+              opacity: 0.4;
+              transition: all 0.2s;
+              &:hover {
+                opacity: 1;
+                filter: drop-shadow(0px 0px 2px rgba($bg-purple, 0.4));
+              }
+              height: 20px;
+              width: 20px;
             }
           }
         }
         .title {
+          box-sizing: border-box;
+          padding: 20px;
           transition: all 0.2s;
           font-size: 20px;
           color: $text-header;
@@ -83,22 +108,32 @@
           font-weight: 600;
         }
         .description {
+          margin-top: -20px;
+          padding: 20px;
           color: $text-header;
           font-size: 13px;
-          opacity: 0.6;
-          margin-top: 10px;
-          margin-bottom: 10px;
+          opacity: 0.5;
         }
         .tags {
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
           display: flex;
-          margin-top: auto;
-          place-self: bottom;
           p {
             font-size: 13px;
             margin-right: 15px;
             font-family: $font-monospace;
-            color: $text-header;
-            opacity: 0.4;
+            color: $bg-purple;
+            border: 1px solid $bg-purple;
+            padding: 5px 7px;
+            border-radius: 10px;
+            font-weight: 700;
+            background: rgba($bg-purple, 0.1);
+            opacity: 0.6;
+            transition: all 0.2s;
+            &:hover {
+              opacity: 1;
+            }
           }
         }
       }

@@ -42,17 +42,16 @@
           display: flex;
           justify-content: center;
           .right {
-            margin-left: 50px;
+            transition: 0.2s all;
           }
-          .checkbox-li {
-            padding-top: 21px;
-            cursor: pointer;
-            display: flex;
-            p {
-              pointer-events: none;
-              margin-left: 20px;
-              color: rgba($text-header, 0.8);
-            }
+          .checked {
+            margin-left: 50px;
+            opacity: 1;
+          }
+          .unchecked {
+            margin-left: -300px;
+            opacity: 0;
+            pointer-events: none;
           }
           li {
             .slider {
@@ -91,27 +90,47 @@
                 background: rgba($bg-purple, 0.1);
               }
             }
-            .checkbox {
-              position: relative;
-              height: 25px;
-              aspect-ratio: 1/1;
-              outline: 1px solid $bg-purple;
-              border-radius: 3px;
-              .check {
-                background: transparent;
-                height: 100%;
-                width: 100%;
-                border-radius: inherit;
-                transition: all 0.25s;
-              }
-              .checked {
-                background: $bg-purple;
-              }
-            }
           }
         }
       }
     }
+  }
+}
+
+.normal-email {
+  color: $text-main;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.checkbox {
+  position: relative;
+  height: 25px;
+  aspect-ratio: 1/1;
+  outline: 1px solid $bg-purple;
+  border-radius: 3px;
+  margin-bottom: 25px;
+  .check {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    transition: all 0.25s;
+  }
+  .checked {
+    background: $bg-purple;
+  }
+}
+
+.checkbox-li {
+  margin-top: -20px;
+  padding-top: 21px;
+  cursor: pointer;
+  display: flex;
+  p {
+    pointer-events: none;
+    margin-left: 20px;
+    color: rgba($text-header, 0.8);
   }
 }
 

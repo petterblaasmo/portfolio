@@ -4,3 +4,4 @@ export { default as Pagination } from "./Pagination/Pagination";
 export { default as Information } from "./Information/Information";
 export { default as Footer } from "./Footer/Footer";
 export { default as AlertBox } from "./AlertBox/AlertBox";
+export { default as Toolbar } from "./Toolbar/Toolbar";

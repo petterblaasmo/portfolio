@@ -1,0 +1,29 @@
+@import "../../global.scss";
+
+.toolbar {
+  visibility: hidden;
+  padding: 20px;
+  border-radius: 100px;
+  position: fixed;
+  bottom: $distance;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $box-shadow;
+  background: rgba($bg-main, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  li {
+    margin: 0 20px;
+    a {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
