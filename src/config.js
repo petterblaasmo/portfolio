@@ -1,4 +1,4 @@
-export const API_URL = "http://localhost:9000";
+export const API_URL = "https://api.petterblaasmo.com";
 export const Skills = {
   category: [
     { type: "Front-End", progress: 100 },

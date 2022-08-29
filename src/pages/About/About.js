@@ -21,9 +21,9 @@ const About = () => {
           - where I was looking into JavaScript and SourcePawn.
         </p>
         <p>
-          Today I do freelance work for various clients I have worked with in
-          the past; my main goal is to satisfy my clients by making them happy.
-          Most of my clients come from{" "}
+          Today I do freelance work for various clients; my goal is to make my
+          clients satisfied and happy by bringing fresh ideas and good solutions
+          that exceed their expectations. Most of my clients come from{" "}
           <a href="https://upwork.com" target="_blank" rel="noreferrer">
             Upwork
           </a>

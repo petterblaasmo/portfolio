@@ -32,10 +32,9 @@ const SkillPage = () => {
           <hr />
         </h1>
         <p>
-          Since I began my web developer journey{" "}
-          {Number(new Date().getFullYear()) - 2018} years ago, I've done quite
-          variable work for a lot of different clients while also collaborating
-          with talented developers.
+          Since my web developer journey began in 2018 I have delivered
+          different solutions for a wide range of clients, and collaborated with
+          several talented developers in the process.
         </p>
         <p>
           I mostly create responsive websites for startup businesses to help
