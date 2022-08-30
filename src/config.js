@@ -26,10 +26,6 @@ export const SocialIcons = [
     name: "Instagram",
     href: "https://www.instagram.com/petterblaasmo/",
   },
-  {
-    name: "Twitter",
-    href: "https://www.twitter.com/petterblaasmo",
-  },
 ];
 export const Items = ["About", "Work", "Projects", "Skills", "Contact"];
 export const Work = [
